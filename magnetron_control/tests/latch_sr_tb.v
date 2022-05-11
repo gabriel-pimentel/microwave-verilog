@@ -1,7 +1,7 @@
 // Code your testbench here
 // or browse Examples
 `timescale 1ns/1ps
-
+`include "../verilog/latch_SR.v"
 
 module latch_sr_tb();
 
