@@ -1,5 +1,5 @@
-`include "../magnetron_control/magnetron_controller/verilog/latch_sr.v"
-`include "../magnetron_control/magnetron_controller/verilog/mag_logic.v"
+`include "../magnetron_control/magnetron_controller/hdl/latch_sr.v"
+`include "../magnetron_control/magnetron_controller/hdl/mag_logic.v"
 
 module magnetron_controller(
     input wire startn , stopn , clearn, door_closed, timer_done, 
