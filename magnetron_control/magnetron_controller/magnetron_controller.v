@@ -1,13 +1,20 @@
 `include "../magnetron_control/magnetron_controller/verilog/latch_sr.v"
-`include "../magnetron_control/magnetron_controller/verilog/logic_mag.v"
+`include "../magnetron_control/magnetron_controller/verilog/mag_logic.v"
+
 module magnetron_controller(
     input wire startn , stopn , clearn, door_closed, timer_done, 
     output wire mag_on
 ); 
-    wire r, s; // Fios internos que representam as entradas R e S do latch
-    // Passando os inputs e outputs para o bloco lógico do magnetron
-    mag_logic logic(startn, stopn, clearn, door_closed, timer_done, s, r);
-    // Passando os inputs e outputs para o latch_SR
-    latch_sr latch(s, r, mag_on);  
+    wire r, s;
+
+    mag_logic maglogic (
+    	.startn(startn), 
+    	.stopn(stopn), 
+    	.clearn(clearn), 
+    	.door_closed(door_closed_tb),
+    	.timer_done(timer_done), 
+    	.s(s), .r(r));
+    
+    latch_sr latchsr (.s(s), .r(r), .q(mag_on));  
     
 endmodule

@@ -1,17 +1,21 @@
-`timescale 1ps/1ps
+`timescale 1ns/1ps
+`include "../magnetron_control/magnetron_controller/magnetron_controller.v"
 
-module magnetron_controller_tb ();
+
+module magnetron_controller_tb();
 
     reg startn_tb, stopn_tb , clearn_tb, door_closed_tb, timer_done_tb;
     wire mag_on_tb;
 
-    magnetron_controller DUT (.startn(startn_tb), .stopn(stopn_tb), .clearn(clearn_tb),
-        .door_closed(door_closed_tb) , .timer_done(timer_done_tb), .mag_on(mag_on_tb));
+    magnetron_controller UUT(
+        .startn(startn_tb),
+        .stopn(stopn_tb),
+        .clearn(clearn_tb),
+        .door_closed(door_closed_tb),
+        .timer_done(timer_done_tb),
+        .mag_on(mag_on_tb));
     
-    // Os casos de teste servem para verificar se o controle do magnetron está funcionando de forma
-    // adequada, então vários testes foram feitos, com entradas diferentes, na tentativa de provocar
-    // falhas, que não foram detectadas
-
+   
     initial begin
         $dumpfile("magnetron_controller_tb.vcd");
 		$dumpvars(0,magnetron_controller_tb);

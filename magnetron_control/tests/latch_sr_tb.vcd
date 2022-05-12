@@ -1,0 +1,91 @@
+$date
+	Wed May 11 23:38:17 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module latch_sr_tb $end
+$var wire 1 ! q_tb $end
+$var reg 1 " r_tb $end
+$var reg 1 # s_tb $end
+$scope module UUT $end
+$var wire 1 $ r $end
+$var wire 1 % s $end
+$var reg 1 & q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x&
+0%
+0$
+0#
+0"
+x!
+$end
+#10000
+1&
+1!
+1#
+1%
+#20000
+0&
+0!
+0#
+0%
+1"
+1$
+#30000
+x&
+x!
+1#
+1%
+#40000
+0#
+0%
+0"
+0$
+#50000
+1&
+1!
+1#
+1%
+#60000
+0&
+0!
+0#
+0%
+1"
+1$
+#70000
+x&
+x!
+1#
+1%
+#80000
+0#
+0%
+0"
+0$
+#90000
+1&
+1!
+1#
+1%
+#100000
+0&
+0!
+0#
+0%
+1"
+1$
+#110000
+x&
+x!
+1#
+1%
+#120000
