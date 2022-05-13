@@ -1,6 +1,6 @@
 `timescale 1ps/1ps
 
-module timer_input_ctrl_tb; 
+module timer_input_control_tb; 
 
     reg  [9:0] teclado;
     reg enablen, clock; 
@@ -11,11 +11,11 @@ module timer_input_ctrl_tb;
     always #50 clock <= !clock;
     
 
-    timer_input_ctrl dut(.D(D), .loadn(loadn), .pgt_1Hz(pgt_1Hz), .teclado(teclado), .enablen(enablen), .clock(clock));
+    timer_input_control dut(.D(D), .loadn(loadn), .pgt_1Hz(pgt_1Hz), .teclado(teclado), .enablen(enablen), .clock(clock));
 
     initial begin
-        $dumpfile("timer_input_ctrl.vcd");
-	    $dumpvars(0,timer_input_ctrl_tb);
+        $dumpfile("timer_input_control.vcd");
+	    $dumpvars(0,timer_input_control_tb);
 
         
     end

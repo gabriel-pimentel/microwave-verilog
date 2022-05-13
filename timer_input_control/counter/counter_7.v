@@ -1,4 +1,4 @@
-module contadorNaoReciclavel_0_7(
+module counter_7(
   input wire clock, clear,
   output reg saida);
   

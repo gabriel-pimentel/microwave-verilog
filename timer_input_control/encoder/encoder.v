@@ -1,4 +1,4 @@
-module codificador_prioridade(
+module encoder(
   output reg [3:0] saida_cod,
   output wire loadn,
   input wire [9:0] teclado_microondas,

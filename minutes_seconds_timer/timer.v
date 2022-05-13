@@ -1,5 +1,5 @@
-`include "Timer/modulos_nivel3/counter_mod6.v"
-`include "Timer/modulos_nivel3/counter_mod10.v"
+`include "minutes_seconds_timer/modulos_nivel3/counter_mod6.v"
+`include "minutes_seconds_timer/modulos_nivel3/counter_mod10.v"
 
 module timer (input wire [3:0] data,input wire loadn,input wire clearn,input wire clock,input wire en,output wire [3:0] sec_ones, sec_tens, mins,output wire zero);
 

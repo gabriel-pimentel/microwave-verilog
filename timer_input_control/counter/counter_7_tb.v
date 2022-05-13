@@ -6,14 +6,14 @@ module counter_7_tb;
   wire saida;
   
   
-  contadorNaoReciclavel_0_7 dut(.clock(clock), .clear(clear), .saida(saida));
+  counter_7 dut(.clock(clock), .clear(clear), .saida(saida));
   
   always #5 clock = ~clock; 
   always #80 clear = ~clear;
   
   initial begin
     
-    $dumpfile("counter07.vcd");
+    $dumpfile("counter_7.vcd");
     $dumpvars(0, counter_7_tb);
     
     clock = 0; clear = 0;

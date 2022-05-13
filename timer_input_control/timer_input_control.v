@@ -1,4 +1,9 @@
-module timer_input_ctrl (output wire [3:0] D,
+`include "counter/counter_7.v"
+`include "div_100/div_100.v"
+`include "encoder/encoder.v"
+`include "mux/mux.v"
+
+module timer_input_control (output wire [3:0] D,
                 output wire loadn, pgt_1Hz,
                 input wire [9:0] teclado,
                 input wire enablen, clock
@@ -7,12 +12,12 @@ module timer_input_ctrl (output wire [3:0] D,
     wire borda_subida, clear, clock_div; 
 
   
-    codificador_prioridade encoder(D, loadn, teclado, enablen);
+    encoder encoder(D, loadn, teclado, enablen);
  
     div_100 dividir(clock, clock_div);
 
-    contadorNaoReciclavel_0_7 delay(clock, loadn, borda_subida);
+    counter_7 delay(clock, loadn, borda_subida);
 
-    MUX_2to1 MUX(pgt_1Hz, borda_subida, clock_div, enablen);
+    mux mux(pgt_1Hz, borda_subida, clock_div, enablen);
 
 endmodule
