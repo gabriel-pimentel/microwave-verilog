@@ -1,0 +1,83 @@
+$date
+	Thu May 12 21:39:53 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ms
+$end
+$scope module encoder_tb $end
+$var wire 1 ! loadn $end
+$var wire 4 " saida_encoder [3:0] $end
+$var reg 1 # enablen $end
+$var reg 10 $ numpad [9:0] $end
+$scope module dut $end
+$var wire 1 % enablen $end
+$var wire 1 ! loadn $end
+$var wire 10 & teclado_microondas [9:0] $end
+$var reg 4 ' saida_cod [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1 '
+b10 &
+1%
+b10 $
+1#
+b1 "
+1!
+$end
+#10
+b0 '
+b0 "
+b0 $
+b0 &
+#20
+0#
+0%
+#30
+0!
+b1 $
+b1 &
+#40
+b1 '
+b1 "
+b10 $
+b10 &
+#50
+b10 '
+b10 "
+b100 $
+b100 &
+#60
+b11 '
+b11 "
+b1001 $
+b1001 &
+#70
+b1000 $
+b1000 &
+#80
+b100 '
+b100 "
+b10000 $
+b10000 &
+#90
+b101 '
+b101 "
+b100000 $
+b100000 &
+#100
+b110 '
+b110 "
+b1000000 $
+b1000000 &
+#110
+b111 '
+b111 "
+b10000000 $
+b10000000 &
+#120
