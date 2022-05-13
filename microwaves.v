@@ -1,7 +1,7 @@
-`include "../encoder_nivel2/hdl/encoder.v"
-`include "../decoder_nivel2/hdl/decoder_7.v"
-`include "../timer_nivel2/hdl/timer.v"
-`include "../magnetron_control/magnetron_controller/magnetron_controller.v"
+`include "7_segment_decoder/hdl/decoder_7.v"
+`include "timer_input_control/timer_input_control.v"
+`include "minutes_seconds_timer/timer.v"
+`include "magnetron_control/magnetron_controller/magnetron_controller.v"
 
 
 module microwave(input wire startn, clearn, stopn, door_closed, clock,
@@ -15,7 +15,7 @@ module microwave(input wire startn, clearn, stopn, door_closed, clock,
 
     magnetron_controller controller(startn, stopn, clearn, door_closed, zero_to_timer_done, mag_on);
 
-    encoder enc(D_to_data, loadn_to_loadn, pgt_to_clock, keypad, mag_on, clock);
+    timer_input_control enc(D_to_data, loadn_to_loadn, pgt_to_clock, keypad, mag_on, clock);
 
     timer timer(timer_decoder_sec, timer_decoder_tens, timer_decoder_mins, zero_to_timer_done, pgt_to_clock, clearn, mag_on, loadn_to_loadn, D_to_data);
 
